@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    background: #333;
+    font-family: 'Prompt', sans-serif;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+    background: #333;
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+h1 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+.btn {
+    width: 130px;
+    height: 40px;
+    font-family: 'Prompt', sans-serif;
+    padding: 10px 25px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.btnStart {
+    background: rgb(0,172,238);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;   
+}
+
+.btnStart span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btnStart:before,
+.btnStart:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: blue;
+    transition: all 0.3s ease;
+}
+
+.btnStart:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btnStart:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btnStart:hover{
+    background: transparent;
+    box-shadow: none;
+}
+
+.btnStart:hover:before {
+    height: 100%;
+}
+
+.btnStart:hover:after {
+    width: 100%;
+}
+
+.btnStart span:hover{
+    color: #fff;
+}
+
+.btnStart span:before,
+.btnStart span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: blue;
+    transition: all 0.3s ease;
+}
+
+.btnStart span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btnStart span:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btnStart span:hover:before {
+    height: 100%;
+}
+
+.btnStart span:hover:after {
+    width: 100%;
+}
+
+.contant {
+    background: #fff;
+    border: 2px solid rgb(0,172,238);
+    border-radius: 10px;
+    width: 400px;
+}
+
+.contant__header {
+    background: rgb(0,172,238);
+    border-radius: 10px 10px 0 0;
+}
+
+h2 {
+    color: #fff;
+    font-size: 34px;
+    padding: 14px;
+}
+
+form {
+    font-family: 'Prompt', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.todo-list {
+    padding: 0;
+    list-style: none;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.add-task-input {
+    flex-grow: 1;
+    box-sizing: border-box;
+    height: 46px;
+    margin-right: 16px;
+    padding: 12px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+    border: 1px solid rgb(0,172,238);
+    border-radius: 4px;
+}
+
+.add-task-input:focus {
+    border: 1px solid blue;
+    outline: none;
+}
+
+.add-task-input:hover {
+    box-shadow: 0 0 4px blue;
+}
+
+.add-task-input::placeholder {
+    color: #ccc;
+}
+
+.add-task-button {
+    padding: 12px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    border-radius: 4px;
+}
+
+.add-task-button:hover,
+.add-task-button:focus {
+    background-color: rgb(0,172,238);
+}
+
+.add-task-button:active {
+    background-color: rgb(0,172,238);
+}
+
+.todo-list-item label {
+    text-align: left;
+    display: block;
+    margin-left: 44px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    color: #000;
+    font-weight: normal;
+}

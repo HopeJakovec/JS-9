@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Надежда Яковец">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="screen">
+        <h1>ToDo List</h1>
+        <button class="start btn btnStart" id="start"><span>create</span></button>
+    </div>
+    <div class="screen">
+        <div class="contant">
+            <div class="contant__header">
+                <h2>ToDo List</h2>
+            </div>
+
+            <form class="add-task" method="post">
+                <input class="add-task-input" type="text" placeholder="Type your task..." required>
+                <button class="add-task-button" type="submit">add</button>
+            </form>
+    
+            <ul class="todo-list"></ul>   
+        
+            <template id="task-template">
+                <li class="todo-list-item">
+                <label>
+                    <input type="checkbox" class="todo-list-input line-through">
+                    <span></span>
+                </label>
+                </li>
+            </template>
+
+        </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
